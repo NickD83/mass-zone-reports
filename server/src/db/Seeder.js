@@ -3,6 +3,7 @@ import { connection } from "../boot.js"
 import UserSeeder from "./seeders/UserSeeder.js";
 import MassZoneSeeder from "./seeders/MassZoneSeeder.js"
 import MethodSeeder from "./seeders/MethodSeeder.js";
+import ReportSeeder from "./seeders/ReportSeeder.js";
 
 class Seeder {
   static async seed() {
@@ -16,6 +17,9 @@ class Seeder {
 
     console.log("seeding methods");
     await MethodSeeder.seed();
+
+    console.log("seeding reports");
+    await ReportSeeder.seed();
 
     console.log("Done!")
     await connection.destroy()
