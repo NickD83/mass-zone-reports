@@ -1,5 +1,6 @@
 import express from "express";
 import { MassZone } from "../../../models/index.js";
+import massZoneReportsRouter from "./massZoneReportsRouter.js";
 
 const massZonesRouter = new express.Router();
 
@@ -16,10 +17,11 @@ massZonesRouter.get("/:id", async (req, res) => {
   try {
     const massZone = await MassZone.query().findById(req.params.id)
     return res.status(200).json({ massZone })
-  } catch (err) {
-    return res.status(500).json({ errors })
+  } catch (error) {
+    return res.status(500).json({ errors: error })
   }
 })
 
+massZonesRouter.use("/:massZone.id/reports", massZoneReportsRouter)
 
-export default massZonesRouter
+export default massZonesRouter;
