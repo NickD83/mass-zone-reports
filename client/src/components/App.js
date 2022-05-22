@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { hot } from "react-hot-loader/root";
+import MassZoneIndexPage from "./MassZoneIndexPage";
+import MassZoneShowPage from "./MassZoneShowPage";
 
 import getCurrentUser from "../services/getCurrentUser";
 import "../assets/scss/main.scss";
 import RegistrationForm from "./registration/RegistrationForm";
 import SignInForm from "./authentication/SignInForm";
 import TopBar from "./layout/TopBar";
+
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -28,10 +31,14 @@ const App = (props) => {
       <TopBar user={currentUser} />
       <Switch>
         <Route exact path="/">
-          <h2>Hello from react</h2>
-        </Route>
+          <div className="home-text">
+          <h4>MA Zone Reports is web application for hunters to share what is going on in their favorite zone(s).</h4>
+         </div>
+        </Route>        
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
+        <Route exact path="/zones" component={MassZoneIndexPage} />
+        <Route exact path="/zones/:id" component={MassZoneShowPage} />
       </Switch>
     </Router>
   );
