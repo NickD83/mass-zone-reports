@@ -12,3 +12,70 @@
   -moz-tab-size: 4;
   tab-size: 4;
 }
+
+body {
+  //background-image: url("../../../media/midwestWhitetail.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.home-text {
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  padding: 4em;
+  margin-top: 2%;
+  border-radius: 20px;
+}
+
+.component-container {
+  margin: auto;
+  padding: 2em;
+  width: 50%;
+}
+
+.index-container {
+  margin: auto;
+  padding: 2em;
+  width: 50%;
+}
+
+.tile-box {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  
+
+}
+
+// .hover-2 {
+//   --h: 1.2em;   /* the height */
+  
+//   line-height: var(--h);
+//   color: #0000;
+//   overflow: hidden;
+//   text-shadow: 
+//     0 var(--_t,var(--h)) #fff,
+//     0 0 var(--_c,#000);
+//   background: 
+//     linear-gradient(#1095c1 0 0) 
+//     bottom/100% var(--_d, 0) no-repeat;
+//   transition: 0.3s;
+// }
+
+.hzone-title {
+  text-align: center;
+}
+
+.info-box {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+}
