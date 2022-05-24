@@ -14,7 +14,7 @@
 }
 
 body {
-  //background-image: url("../../../media/midwestWhitetail.jpg");
+  background-image: url("../../../media/midwestWhitetail.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,35 +47,60 @@ body {
   border-bottom: 1px solid black;
   border-left: 2px solid black;
   border-right: 2px solid black;
-  
-
 }
 
-// .hover-2 {
-//   --h: 1.2em;   /* the height */
-  
-//   line-height: var(--h);
-//   color: #0000;
-//   overflow: hidden;
-//   text-shadow: 
-//     0 var(--_t,var(--h)) #fff,
-//     0 0 var(--_c,#000);
-//   background: 
-//     linear-gradient(#1095c1 0 0) 
-//     bottom/100% var(--_d, 0) no-repeat;
-//   transition: 0.3s;
-// }
+
 
 .hzone-title {
   text-align: center;
 }
 
 .info-box {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
   width: 300px;
   height: 100px;
   padding: 15px;
+  box-shadow: 1px 1px ;
+}
+
+
+
+.translucent-form-overlay {
+  max-width: $translucent-form-overlay-max-width;
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.8);
+  padding: 20px;
+  color: $white;
+
+  .columns.row {
+    display: block;
+  }
+
+  h3, label {
+    color: $white;
+  }
+  input, select {
+    color: $dark-gray;
+  }
+  input::placeholder {
+    color: $dark-gray;
+  }
+}
+
+.log-in-form {
+  border: 1px solid $medium-gray;
+  padding: $form-spacing;
+  border-radius: $global-radius;
+}
+
+.button-hover {
+
+}
+
+.chart {
+ margin: auto;
+ object-fit: contain;
 }

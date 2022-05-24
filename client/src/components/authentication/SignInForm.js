@@ -66,7 +66,7 @@ const SignInForm = () => {
   }
 
   return (
-    <div className="component-container" onSubmit={onSubmit}>
+    <div className="component-container log-in-form" onSubmit={onSubmit}>
       <h1>Sign In</h1>
       <form>
         <div>

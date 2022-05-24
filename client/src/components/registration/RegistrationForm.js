@@ -86,7 +86,7 @@ const RegistrationForm = () => {
   }
 
   return (
-    <div className="component-container">
+    <div className="component-container log-in-form">
       <h1>Register</h1>
       <form onSubmit={onSubmit}>
         <div>

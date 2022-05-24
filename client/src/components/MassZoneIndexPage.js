@@ -24,13 +24,16 @@ const MassZoneIndexPage = (props) => {
   }, []);
 
   const massZoneTiles = massZones.map((massZone) => {
+
     return <MassZoneTile key={massZone.id} massZone={massZone} />;
   });
 
   return (
     <div className="hzone-title">
       <h2> Massachusettes Hunting Zones</h2>
+      <div className="button-expanded">
       {massZoneTiles}
+      </div>
     </div>
   )
 }

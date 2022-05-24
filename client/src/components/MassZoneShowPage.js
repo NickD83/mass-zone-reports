@@ -3,6 +3,7 @@ import ZoneReportForm from "./ZoneReportForm";
 import ErrorList from "./layout/ErrorList";
 import translateServerErrors from "../services/translateServerErrors.js";
 import ReportTile from "./ReportTile";
+import Timeline from "./Timeline"
 
 const MassZoneShowPage = (props) => {
   const [massZone, setMassZone] = useState({ reports: [] });
@@ -68,14 +69,17 @@ const MassZoneShowPage = (props) => {
 
 
   //const reportTiles = massZone.reports.map((report) => {
-   //return <ReportTile key={report.id} {...report} handleDelete={handleDelete} />
+  //return <ReportTile key={report.id} {...report} handleDelete={handleDelete} />
   //})
 
   return (
     <div className="component-container" >
       <h1> Zone {massZone.zoneName}</h1>
+      <div className="chart">
+        <Timeline />
+      </div>
       <p className="info-box">{massZone.zoneInfo}</p>
-        
+
       <ErrorList errors={errors} />
       <ZoneReportForm postReport={postReport} />
     </div>
