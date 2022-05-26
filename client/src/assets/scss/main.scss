@@ -13,13 +13,43 @@
   tab-size: 4;
 }
 
-body {
-  //background-image: url("../../../media/midwestWhitetail.jpg");
-  background-size: cover;
-  background-position: center;
+.homeImage {
+  background-image: url("/Users/nickdavidovich/challenges/mass-zone-reports/client/media/midwestWhitetail.jpg") ;
+  background-color: #cccccc;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
 }
+
+.signInImage {
+  background-image: url("/Users/nickdavidovich/challenges/mass-zone-reports/client/media/hunter.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+.maZonesImage {
+  background-image: url("/Users/nickdavidovich/challenges/mass-zone-reports/client/media/MAZONES.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  //height: 700px;
+  background-position: center;
+  object-fit: cover;
+}
+
+.registerImage {
+  background-image: url("/Users/nickdavidovich/challenges/mass-zone-reports/client/media/silhouette-man-fishing-beach-sunset.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+
 
 .home-text {
   font-weight: bold;
@@ -34,6 +64,7 @@ body {
   margin: auto;
   padding: 2em;
   width: 50%;
+  
 }
 
 .index-container {
@@ -47,35 +78,72 @@ body {
   border-bottom: 1px solid black;
   border-left: 2px solid black;
   border-right: 2px solid black;
-  
-
 }
 
-// .hover-2 {
-//   --h: 1.2em;   /* the height */
-  
-//   line-height: var(--h);
-//   color: #0000;
-//   overflow: hidden;
-//   text-shadow: 
-//     0 var(--_t,var(--h)) #fff,
-//     0 0 var(--_c,#000);
-//   background: 
-//     linear-gradient(#1095c1 0 0) 
-//     bottom/100% var(--_d, 0) no-repeat;
-//   transition: 0.3s;
-// }
+.report-box {
+  border-bottom: 1px solid black;
+  width: 50%;
+  margin: auto;
+}
+
+.date {
+  font-weight: bold
+}
+
 
 .hzone-title {
+  margin: auto;
   text-align: center;
+  width: 50%;
+
 }
 
 .info-box {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  width: 300px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  width: 25%;
   height: 100px;
   padding: 15px;
+  box-shadow: 1px 1px ;
+  background-color: white;
+}
+
+
+
+.translucent-form-overlay {
+  max-width: $translucent-form-overlay-max-width;
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.8);
+  padding: 20px;
+  color: $white;
+
+  .columns.row {
+    display: block;
+  }
+
+  h3, label {
+    color: $white;
+  }
+  input, select {
+    color: $dark-gray;
+  }
+  input::placeholder {
+    color: $dark-gray;
+  }
+}
+
+.log-in-form {
+  border: 1px solid $medium-gray;
+  padding: $form-spacing;
+  border-radius: $global-radius;
+}
+.chart-container {
+  margin: left;
+  width: 50%;
+}
+.chart {
+ margin: left;
+ width:50%
 }

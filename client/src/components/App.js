@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { hot } from "react-hot-loader/root";
 import MassZoneIndexPage from "./MassZoneIndexPage";
 import MassZoneShowPage from "./MassZoneShowPage";
+import { Link } from 'react-router-dom'
 
 import getCurrentUser from "../services/getCurrentUser";
 import "../assets/scss/main.scss";
@@ -31,9 +32,15 @@ const App = (props) => {
       <TopBar user={currentUser} />
       <Switch>
         <Route exact path="/">
-          <div className="home-text">
-          <h4>MA Zone Reports is web application for hunters to share what is going on in their favorite zone(s).</h4>
+          <Link to={`/zones`} className="react-link">
+          <div className="home-text" >
+          <h4>MA Zone Reports is web application for all outdoor participents to share the goings-on in their favorite zone(s).</h4>
+          <h5>Let's get started...</h5>
          </div>
+         <div>
+         <p className="homeImage"></p>
+         </div>
+         </Link>
         </Route>        
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />

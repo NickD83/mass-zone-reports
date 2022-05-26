@@ -66,7 +66,8 @@ const SignInForm = () => {
   }
 
   return (
-    <div className="component-container" onSubmit={onSubmit}>
+    <div className="signInImage">
+    <div className="component-container log-in-form translucent-form-overlay" onSubmit={onSubmit}>
       <h1>Sign In</h1>
       <form>
         <div>
@@ -92,6 +93,7 @@ const SignInForm = () => {
           <input type="submit" className="button" value="Sign In" />
         </div>
       </form>
+    </div>
     </div>
   );
 };
