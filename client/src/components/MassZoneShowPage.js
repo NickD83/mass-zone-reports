@@ -4,11 +4,13 @@ import ErrorList from "./layout/ErrorList";
 import translateServerErrors from "../services/translateServerErrors.js";
 import ReportTile from "./ReportTile";
 import Timeline from "./Timeline"
+import ZoneInfoBox from "./ZoneInfoBox";
 
 const MassZoneShowPage = (props) => {
   const [massZone, setMassZone] = useState({ reports: [] });
   const [errors, setErrors] = useState({});
   const { id } = props.match.params;
+ 
 
   const handleDelete = (reportId) => {
     const updatedReports = massZone.reports.filter((report) => report.id !== reportId)
@@ -67,22 +69,24 @@ const MassZoneShowPage = (props) => {
 
   }
 
-
-  //const reportTiles = massZone.reports.map((report) => {
-  //return <ReportTile key={report.id} {...report} handleDelete={handleDelete} />
-  //})
+  const reportTiles = massZone.reports.map((report) => {
+    // remove ? ^^
+    return <ReportTile key={report.id} {...report} handleDelete={handleDelete} />
+  })
 
   return (
-    <div className="component-container" >
-      <h1> Zone {massZone.zoneName}</h1>
-      <div className="chart">
-        <Timeline />
-      </div>
-      <p className="info-box">{massZone.zoneInfo}</p>
-
+    <>
+    <h1> Zone {massZone.zoneName}</h1>
+   <ZoneInfoBox />
+    <div> 
+    <Timeline />
+    {reportTiles}
+    </div>
+    <div className="component-container"> 
       <ErrorList errors={errors} />
       <ZoneReportForm postReport={postReport} />
     </div>
+    </>
   )
 }
 

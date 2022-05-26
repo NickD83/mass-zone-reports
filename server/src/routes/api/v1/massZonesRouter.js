@@ -16,12 +16,14 @@ massZonesRouter.get("/", async (req, res) => {
 massZonesRouter.get("/:id", async (req, res) => {
   try {
     const massZone = await MassZone.query().findById(req.params.id)
+    massZone.reports = await massZone.$relatedQuery("reports")
     return res.status(200).json({ massZone })
   } catch (error) {
     return res.status(500).json({ errors: error })
   }
 })
-
-massZonesRouter.use("/:massZone.id/reports", massZoneReportsRouter)
+//MassZone.query().findById(req.params.id)
+//massZone.reports = await massZone.$relatedQuery("reports")
+massZonesRouter.use("/:massZoneId/reports", massZoneReportsRouter)
 
 export default massZonesRouter;

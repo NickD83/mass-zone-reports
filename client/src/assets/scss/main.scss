@@ -13,13 +13,43 @@
   tab-size: 4;
 }
 
-body {
-  background-image: url("../../../media/midwestWhitetail.jpg");
-  background-size: cover;
-  background-position: center;
+.homeImage {
+  background-image: url("/Users/nickdavidovich/challenges/mass-zone-reports/client/media/midwestWhitetail.jpg") ;
+  background-color: #cccccc;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
 }
+
+.signInImage {
+  background-image: url("/Users/nickdavidovich/challenges/mass-zone-reports/client/media/hunter.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+.maZonesImage {
+  background-image: url("/Users/nickdavidovich/challenges/mass-zone-reports/client/media/MAZONES.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  //height: 700px;
+  background-position: center;
+  object-fit: cover;
+}
+
+.registerImage {
+  background-image: url("/Users/nickdavidovich/challenges/mass-zone-reports/client/media/silhouette-man-fishing-beach-sunset.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+
 
 .home-text {
   font-weight: bold;
@@ -34,6 +64,7 @@ body {
   margin: auto;
   padding: 2em;
   width: 50%;
+  
 }
 
 .index-container {
@@ -49,10 +80,22 @@ body {
   border-right: 2px solid black;
 }
 
+.report-box {
+  border-bottom: 1px solid black;
+  width: 50%;
+  margin: auto;
+}
+
+.date {
+  font-weight: bold
+}
 
 
 .hzone-title {
+  margin: auto;
   text-align: center;
+  width: 50%;
+
 }
 
 .info-box {
@@ -60,10 +103,11 @@ body {
   border-bottom: 2px solid black;
   border-left: 2px solid black;
   border-right: 2px solid black;
-  width: 300px;
+  width: 25%;
   height: 100px;
   padding: 15px;
   box-shadow: 1px 1px ;
+  background-color: white;
 }
 
 
@@ -95,12 +139,11 @@ body {
   padding: $form-spacing;
   border-radius: $global-radius;
 }
-
-.button-hover {
-
+.chart-container {
+  margin: left;
+  width: 50%;
 }
-
 .chart {
- margin: auto;
- object-fit: contain;
+ margin: left;
+ width:50%
 }

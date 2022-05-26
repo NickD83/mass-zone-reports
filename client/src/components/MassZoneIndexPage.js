@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MassZoneTile from "./MassZoneTile";
 
+
 const MassZoneIndexPage = (props) => {
   const [massZones, setMassZones] = useState([]);
 
@@ -29,13 +30,12 @@ const MassZoneIndexPage = (props) => {
   });
 
   return (
-    <div className="hzone-title">
-      <h2> Massachusettes Hunting Zones</h2>
-      <div className="button-expanded">
-      {massZoneTiles}
+    <div className="maZonesImage">
+      <div className="hzone-title button-expanded">
+        <h2> Massachusettes Wildlife Zones</h2>
+        {massZoneTiles}
       </div>
-    </div>
-  )
+    </div>)
 }
 
 export default MassZoneIndexPage

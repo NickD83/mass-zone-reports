@@ -13,7 +13,7 @@ rootRouter.use("/", clientRouter);
 rootRouter.use("/api/v1/user-sessions", userSessionsRouter);
 rootRouter.use("/api/v1/users", usersRouter);
 rootRouter.use("/api/v1/zones", massZonesRouter);
-rootRouter.use("/api/v1/zones/:id/reports", reportsRouter);
+rootRouter.use("/api/v1/reports", reportsRouter);
 rootRouter.use("/api/v1/methods", methodsRouter);
 //place your server-side routes here
 

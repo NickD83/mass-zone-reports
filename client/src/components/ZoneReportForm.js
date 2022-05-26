@@ -32,7 +32,7 @@ const ZoneReportForm = ({ postReport }) => {
 
 
   return (
-    <div className="translucent-form-overlay">
+    <div>
       <h4>Submit a Report</h4>
       <form onSubmit={handleSubmit}>
       <label htmlFor="reportDate">

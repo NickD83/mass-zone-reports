@@ -86,7 +86,8 @@ const RegistrationForm = () => {
   }
 
   return (
-    <div className="component-container log-in-form">
+    <div className="registerImage">
+    <div className="component-container log-in-form translucent-form-overlay">
       <h1>Register</h1>
       <form onSubmit={onSubmit}>
         <div>
@@ -125,6 +126,8 @@ const RegistrationForm = () => {
         </div>
       </form>
     </div>
+   </div>
+  
   );
 };
 

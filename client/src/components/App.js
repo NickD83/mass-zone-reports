@@ -33,9 +33,12 @@ const App = (props) => {
       <Switch>
         <Route exact path="/">
           <Link to={`/zones`} className="react-link">
-          <div className="home-text">
-          <h4>MA Zone Reports is web application for hunters to share what is going on in their favorite zone(s).</h4>
+          <div className="home-text" >
+          <h4>MA Zone Reports is web application for all outdoor participents to share the goings-on in their favorite zone(s).</h4>
           <h5>Let's get started...</h5>
+         </div>
+         <div>
+         <p className="homeImage"></p>
          </div>
          </Link>
         </Route>        

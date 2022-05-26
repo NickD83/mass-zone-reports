@@ -9,7 +9,6 @@ exports.up = async (knex) => {
   return knex.schema.createTable("massZones", (table) => {
     table.bigIncrements("id");
     table.string("zoneName").notNullable();
-    table.text("zoneInfo");
     table.timestamp("createdAt").notNullable().defaultTo(knex.fn.now());
     table.timestamp("updatedAt").notNullable().defaultTo(knex.fn.now());
   });
